@@ -21,7 +21,7 @@ app.get('/article-third',function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'article-third.html'));    
 });
 
-app.get('/profile',function(req,res){
+app.get('/profile',function(req,res) {
        ile(path.join(__dirname, 'ui', 'profile.html'));   
 });
 
