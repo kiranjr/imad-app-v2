@@ -22,7 +22,7 @@ app.get('/article-third',function (req,res) {
 });
 
 app.get('/profile',function(req,res) {
-       ile(path.join(__dirname, 'ui', 'profile.html'));   
+       res.sendfile(path.join(__dirname, 'ui', 'profile.html'));   
 });
 
 app.get('/ui/style.css', function (req, res) {
