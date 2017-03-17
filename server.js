@@ -9,13 +9,34 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html')); 
 });
 
-var articleone={
-    title: 'Article one | Kiranjr.',
-    heading: 'Article-one',
-    date: 'FEB 9,2017',
-    content: `<p>
-                    hi!this my first content in my first webapp ,hope so that i will learn it little more when i need this .
-                </p>`
+var articles = {
+     'article-one' : {
+                title: 'Article one | Kiranjr.',
+                heading: 'Article-one',
+                date: 'FEB 9,2017',
+                content: `<p>
+                                hi!this my first content in my first webapp ,hope so that i will learn it little more when i need this .
+                            </p>`
+            },
+     'artilce-second' : {
+        title: 'Article second | kiranjr.',
+        heading: 'Article-second',
+        date: 'MAR 17,2017',
+        content: `<p>
+                    hi ! This My Second Article.
+                  </p>`
+    },
+     'artilce-third' : {
+        title: 'Article third | kiranjr.',
+        heading: 'Article-third',
+        date: 'OCT 22,2017',
+        content: `
+            <p>
+                Hi ! This My Third Article.<br>
+                And This My New Line.
+            </p>
+        ` 
+    }
 };
 
 function createtemplate(data){
@@ -56,16 +77,9 @@ function createtemplate(data){
     return htmltemplate;
 }
 
-app.get('/article-one',function (req,res) {
-    res.send(createtemplate(articleone));   
-});
-
-app.get('/article-second',function (req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-second.html'));   
-});
-
-app.get('/article-third',function (req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-third.html'));    
+app.get('/:articlename',function (req,res) {
+    var articlename = res.params.articlename;
+    res.send(createtemplate(articles[articlename]));   
 });
 
 app.get('/profile',function(req,res) {
