@@ -11,24 +11,24 @@ app.get('/', function (req, res) {
 
 var articles = {
      'article-one' : {
-                title: 'article one | Kiranjr.',
-                heading: 'article-one',
+                title: 'Article one | Kiranjr.',
+                heading: 'Article-one',
                 date: 'FEB 9,2017',
                 content: `<p>
                                 hi!this my first content in my first webapp ,hope so that i will learn it little more when i need this .
                             </p>`
             },
      'article-second' : {
-        title: 'article second | kiranjr.',
-        heading: 'article-second',
+        title: 'Article second | kiranjr.',
+        heading: 'Article-second',
         date: 'MAR 17,2017',
         content: `<p>
                     hi ! This My Second Article.
                   </p>`
     },
      'article-third' : {
-        title: 'article third | kiranjr.',
-        heading: 'article-third',
+        title: 'Article third | kiranjr.',
+        heading: 'Article-third',
         date: 'OCT 22,2017',
         content: `
             <p>
