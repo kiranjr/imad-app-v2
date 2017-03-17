@@ -18,7 +18,7 @@ var articles = {
                                 hi!this my first content in my first webapp ,hope so that i will learn it little more when i need this .
                             </p>`
             },
-     'artilce-second' : {
+     'article-second' : {
         title: 'Article second | kiranjr.',
         heading: 'Article-second',
         date: 'MAR 17,2017',
@@ -26,7 +26,7 @@ var articles = {
                     hi ! This My Second Article.
                   </p>`
     },
-     'artilce-third' : {
+     'article-third' : {
         title: 'Article third | kiranjr.',
         heading: 'Article-third',
         date: 'OCT 22,2017',
