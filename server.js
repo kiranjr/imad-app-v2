@@ -78,7 +78,7 @@ function createtemplate(data){
 }
 
 app.get('/:articleName',function (req,res) {
-    var articleName = res.param.articleName;
+    var articleName = res.params.articleName;
     res.send(createtemplate(articles[articleName]));   
 });
 
