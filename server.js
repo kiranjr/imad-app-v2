@@ -19,24 +19,23 @@ var articles = {
                             </p>`
             },
      'article-second' : {
-        title: 'Article second | kiranjr.',
-        heading: 'Article-second',
-        date: 'MAR 17,2017',
-        content: `<p>
-                    hi ! This My Second Article.
-                  </p>`
-    },
+                title: 'Article second | kiranjr.',
+                heading: 'Article-second',
+                date: 'MAR 17,2017',
+                content: `<p>
+                            hi ! This My Second Article.
+                          </p>`
+            },
      'article-third' : {
-        title: 'Article third | kiranjr.',
-        heading: 'Article-third',
-        date: 'OCT 22,2017',
-        content: `
-            <p>
-                Hi ! This My Third Article.<br>
-                And This My New Line.
-            </p>
-        ` 
-    }
+                title: 'Article third | kiranjr.',
+                heading: 'Article-third',
+                date: 'OCT 22,2017',
+                content: `
+                    <p>
+                        Hi ! This My Third Article.<br>
+                        And This My New Line.
+                    </p>` 
+            }
 };
 
 function createtemplate(data){
