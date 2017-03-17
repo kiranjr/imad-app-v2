@@ -79,7 +79,7 @@ function createtemplate(data){
 
 app.get('/:articlename',function (req,res) {
     var articlename = res.params.articlename;
-    res.send(createtemplate(articles[articleName]));   
+    res.send(createtemplate(articles[articlename]));   
 });
 
 app.get('/profile',function(req,res) {
