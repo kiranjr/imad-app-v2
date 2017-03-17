@@ -77,9 +77,9 @@ function createtemplate(data){
     return htmltemplate;
 }
 
-app.get('/:articlename',function (req,res) {
-    var articlename = res.params.articlename;
-    res.send(createtemplate(articles[articlename]));   
+app.get('/:articleName',function (req,res) {
+    var articleName = res.params.articleName;
+    res.send(createtemplate(articles[articleName]));   
 });
 
 app.get('/profile',function(req,res) {
