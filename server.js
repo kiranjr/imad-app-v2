@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html')); 
 });
 
-app.get('/',function (req,res){
+app.get('/chevy',function (req,res){
    res.sendfile(path.join(__dirname,'ui','chevy.html')); 
 });
 
