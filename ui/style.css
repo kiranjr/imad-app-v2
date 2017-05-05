@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: white;
     margin-top: 60px;
 }
 
@@ -14,7 +14,6 @@ body {
 
 .bold {
     font-weight: bold;
-    height: 22px;
 }
 
 .img-medium {
@@ -23,6 +22,7 @@ body {
 
  .container{
             max-width: 800px;
+            max-height: 22px;
             margin: 0 auto;
             color: green;
             padding-left: 20px;
