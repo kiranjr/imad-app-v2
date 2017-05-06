@@ -38,7 +38,7 @@ app.get('/ford', function (req ,res){
    res.sendfile(path.join(__dirname,'ui','ford.html')); 
 });
 
-app.get('s',function (req, res){
+app.get('/s',function (req, res){
    res.sendfile(path.join(__dirname,'ui','sim.html')); 
 });
 
