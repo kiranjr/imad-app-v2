@@ -38,6 +38,10 @@ app.get('/ford', function (req ,res){
    res.sendfile(path.join(__dirname,'ui','ford.html')); 
 });
 
+app.get('s',function (req, res){
+   res.sendfile(path.join(__dirname,'ui','sim.html')); 
+});
+
 function hash (input, salt){
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return hashed.toString('hex');
