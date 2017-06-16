@@ -20,6 +20,13 @@ body {
     height: 200px;
 }
 
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    color: grey;
+    font-family: monospace;
+}
+
 h1{
     text-decoration: underline;
 }
