@@ -26,7 +26,8 @@ app.get('/test-db',function(req,res){
    }); 
 });
 
-var che={
+var articles = {
+    'chevy' : {
     title: 'Chevrolet',
     content:` <h1>
                 Camaro
@@ -39,6 +40,15 @@ var che={
                 Corvette
             </h1>
             <img src="http://www.chevrolet.ca/content/dam/Chevrolet/northamerica/ca/nscwebsite/en/home/vehicles/performance/2017_corvette_grand_sport/01_images/3.%20Design/ca-2017-chevrolet-corvette-grand-sport-sports-car-mo-design-635x357-08.jpg" class="img-small"/>` 
+    },
+    'ford' : {
+        title: 'Ford',
+        content: `
+            <h1>
+                Mustang
+            </h1>
+            <img src="http://www.ford.com/campaignlibs/content/brand_ford/en_us/wired/performance/gt350/jcr:content/par/introduction.img.jpg/1474903517552.jpg" class="img-medium"/>
+            `}
 };
 
 function createTemplate (data) {
@@ -51,14 +61,7 @@ function createTemplate (data) {
                 ${title}
             </title>
                 <meta name="viewpot" content="width-device-width , initial-scale =1" />
-            <style>
-            .container{
-                max-width: 800px;
-                margin: 0 auto;
-                color: grey;
-                font-family: monospace;
-            }
-            </style>
+                <link href=/ui/style.css" rel="stylesheet" />
         </head>
         <body>
             <div class="container">
@@ -78,8 +81,9 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html')); 
 });
 
-app.get('/chevy',function (req,res){
-  res.send(createTemplate(che)); 
+app.get('/:articleName',function (req,res){
+  var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName])); 
 });
 
 app.get('/ford', function (req ,res){
