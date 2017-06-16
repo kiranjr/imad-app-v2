@@ -61,14 +61,7 @@ function createTemplate (data) {
                 ${title}
             </title>
                 <meta name="viewpot" content="width-device-width , initial-scale =1" />
-                <style>
-                    .container{
-                        max-width: 800px;
-                        margin: 0 auto;
-                        color: grey;
-                        font-family: monospace;
-                    }
-                </style>
+                <link href="/ui/style.css" rel="stylesheet" />
         </head>
         <body>
             <div class="container">
