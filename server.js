@@ -26,12 +26,59 @@ app.get('/test-db',function(req,res){
    }); 
 });
 
+var che={
+    title: 'Chevrolet',
+    content:` <h1>
+                Camaro
+            </h1>
+            <img src="http://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2017/performance/camaro/mov/01-images/2017-camaro-sport-coupe-intro-02.jpg?imwidth=1500" class="img-small"/>
+            <br>
+            <br>
+            <br>
+            <h1>
+                Corvette
+            </h1>
+            <img src="http://www.chevrolet.ca/content/dam/Chevrolet/northamerica/ca/nscwebsite/en/home/vehicles/performance/2017_corvette_grand_sport/01_images/3.%20Design/ca-2017-chevrolet-corvette-grand-sport-sports-car-mo-design-635x357-08.jpg" class="img-small"/>` 
+};
+
+function createTemplate (data) {
+    var title = data.title;
+    var content = data.content;
+    var Temp =
+    `<html>
+        <head>
+            <title>
+                ${title}
+            </title>
+                <meta name="viewpot" content="width-device-width , initial-scale =1" />
+            <style>
+            .container{
+                max-width: 800px;
+                margin: 0 auto;
+                color: grey;
+                font-family: monospace;
+            }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <a href='/'>BACK</a>
+                </div>
+                <hr/>
+                ${content}  
+            </div>
+        </body>
+    </html>
+    `;
+}
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'index.html')); 
 });
 
 app.get('/chevy',function (req,res){
-   res.sendfile(path.join(__dirname,'ui','chevy.html')); 
+  res.send(createTemplate(che)); 
 });
 
 app.get('/ford', function (req ,res){
