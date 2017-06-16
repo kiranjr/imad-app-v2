@@ -20,7 +20,11 @@ body {
     height: 200px;
 }
 
-.container{
+.img-small {
+    width: 800px;
+}
+
+.container {
     max-width: 800px;
     margin: 0 auto;
     color: grey;
